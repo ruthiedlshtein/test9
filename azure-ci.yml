@@ -24,8 +24,6 @@ jobs:
       - script: npm ci
         displayName: 'Install NPM dependencies'
 
-      - script: npm run cy:verify
-        displayName: 'Cypress verify'
 
       # The next command starts the server and runs Cypress end-to-end tests against it.
       # The test artifacts (video, screenshots, test output) will be uploaded to Cypress dashboard
