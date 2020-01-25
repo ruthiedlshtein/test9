@@ -21,16 +21,16 @@ jobs:
       # Install Node dependencies
       # TODO How to cache ~/.npm and ~/.cache folders?
       # https://github.com/cypress-io/cypress-example-kitchensink/issues/132
-      - script: npm ci
-        displayName: 'Install NPM dependencies'
+      #- script: npm ci
+      #  displayName: 'Install NPM dependencies'
 
 
       # The next command starts the server and runs Cypress end-to-end tests against it.
       # The test artifacts (video, screenshots, test output) will be uploaded to Cypress dashboard
       # To record on Cypress dashboard we need to set CYPRESS_RECORD_KEY environment variable
       # environment variable BUILD_BUILDNUMBER is a good candidate
-      - script: npm run test
-        displayName: 'Run Cypress tests'
+      #- script: npm run test
+      #  displayName: 'Run Cypress tests'
 
 
       - bash: |
