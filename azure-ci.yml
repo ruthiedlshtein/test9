@@ -35,4 +35,6 @@ jobs:
 
       - bash: |
          token=$(curl -H "Content-Type: application/json" -X POST --data '{ "client_id": "$(client_id)","client_secret": "$(client_secret)" }' https://xray.cloud.xpand-it.com/api/v1/authenticate| tr -d '"')
-         curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${token}" --data @test-results.xml https://xray.cloud.xpand-it.com/api/v1/import/execution/junit?projectKey=$(project_key)
+      
+      - bash: |  
+         curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${token}" --data @test-results.xml  https://xray.cloud.xpand-it.com/api/v1/import/execution/junit?projectKey=$(project_key)
