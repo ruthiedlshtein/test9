@@ -1,4 +1,4 @@
-# if you want to configure triggers for Azure CI see
+m# if you want to configure triggers for Azure CI see
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#tags
 
 jobs:
@@ -37,4 +37,4 @@ jobs:
           token="$(curl -H "Content-Type: application/json" -X POST --data '{"client_id":"$(client_id)","client_secret": "$(client_secret)"}' https://xray.cloud.xpand-it.com/api/v1/authenticate)"
           echo "this is my test"
           echo ${token}
-          curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${token}" --data @/test-results.xml  https://xray.cloud.xpand-it.com/api/v1/import/execution/junit?projectKey=$(project_key)
+          curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer ${token}" --data @test-results.xml  https://xray.cloud.xpand-it.com/api/v1/import/execution/junit?projectKey=$(project_key)
