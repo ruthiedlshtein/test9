@@ -1,6 +1,5 @@
-m# if you want to configure triggers for Azure CI see
+# if you want to configure triggers for Azure CI see
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#tags
-
 jobs:
 
   # Example job that runs end-to-end tests using Cypress test runner
